@@ -93,7 +93,8 @@ button {
 
 @media screen and (max-width:600px) {
     .container {
-        height: 40vh;
+        height: 35vh;
+        width: 95%;
     }
     .icon-next {
         transform: scale(0.5, 0.8) translateY(-50%);
