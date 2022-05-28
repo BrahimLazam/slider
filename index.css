@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --distanciaPuntos: 14px;
+    --posX: 1%;
+    --colorlista: white;
+}
+
+
+/*--------------------el container--------------------------------*/
+
+.container {
+    position: relative;
+    width: 80%;
+    height: 60vh;
+    margin: 2% auto;
+    display: flex;
+    overflow: hidden;
+}
+
+.container img {
+    min-width: 100% !important;
+    /*la clave-------*/
+    min-height: auto;
+}
+
+
+/*---------------------------------------------------------------*/
+
+
+/*-------------------------bolitas--------------------------------*/
+
+.lista {
+    position: absolute;
+    left: 47%;
+    bottom: 5%;
+}
+
+ul li {
+    float: left;
+    margin-right: var(--distanciaPuntos);
+    font-size: 1.9rem;
+    list-style-type: circle;
+    color: var(--colorlista);
+}
+
+#especial {
+    color: var(--colorlista);
+    font-size: 1.9rem;
+    list-style-type: disc;
+    position: absolute;
+}
+
+
+/*---------------------------------------------------------------*/
+
+
+/*--------------------Estilo a los iconos Next/Prev---------------*/
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-next {
+    position: absolute;
+    transform: translateY(-50%);
+    right: var(--posX);
+    top: 50%;
+}
+
+.icon-prev {
+    position: absolute;
+    transform: translateY(-50%);
+    left: var(--posX);
+    top: 50%;
+}
+
+#prev {
+    opacity: 0;
+}
+
+
+/*---------------------------------------------------------------*/
+
+
+/*----------------------------adaptabilidad-----------------------*/
+
+@media screen and (max-width:600px) {
+    .container {
+        height: 40vh;
+    }
+    .icon-next {
+        transform: scale(0.5, 0.8) translateY(-50%);
+        top: 50%;
+    }
+    .icon-prev {
+        transform: scale(0.5, 0.8) translateY(-50%);
+        top: 50%;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:900px) {
+    .container {
+        height: 50vh;
+    }
+    .icon-next {
+        transform: scale(0.7, 0.9) translateY(-50%);
+        top: 50%;
+    }
+    .icon-prev {
+        transform: scale(0.7, 0.9) translateY(-50%);
+        top: 50%;
+    }
+}
+
+@media screen and (min-width:901px) and (max-width:1300px) {
+    .container {
+        height: 60vh;
+    }
+}
+
+@media screen and (min-width:1301px) {
+    .container {
+        height: 75vh;
+    }
+}
+
+
+/*---------------------------------------------------------------*/
